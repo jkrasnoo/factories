@@ -1,0 +1,36 @@
+{
+    "name": "jkrasnoo/factories",
+    "description": "Various factories that are not supplied due to ZF developers determining that they are 'user land'.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "factories",
+        "zf3",
+        "zf2",
+        "session"
+    ],
+    "authors": [
+        {
+            "name": "Jamie Krasnoo",
+            "email": "jkrasnoo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jkrasnoo\\Factories\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "zendframework/zend-stdlib": "^2.7 || ^3.0",
+        "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+        "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+        "zendframework/zend-session": "^2.7"
+    },
+    "require-dev": {
+        "zendframework/zend-cache": "^2.6.1",
+        "zendframework/zend-session": "^2.6.2",
+        "phpunit/phpunit": "^4.5",
+        "phpbench/phpbench": "^0.10.0"
+    },
+    "minimum-stability": "dev"
+}
