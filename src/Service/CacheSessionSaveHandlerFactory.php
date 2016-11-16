@@ -8,6 +8,7 @@ use Zend\Session\SaveHandler\SaveHandlerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Session\SaveHandler\Cache;
+use Zend\Cache\StorageFactory;
 
 class CacheSessionSaveHandlerFactory implements FactoryInterface
 {
@@ -47,6 +48,10 @@ class CacheSessionSaveHandlerFactory implements FactoryInterface
             }
 
             $cache = $container->get($cacheConfig);
+        }
+        else if (is_array($cacheConfig))
+        {
+            $cache = StorageFactory::factory($cacheConfig);
         }
 
         return new Cache($cache);
