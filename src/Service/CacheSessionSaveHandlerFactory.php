@@ -1,4 +1,11 @@
 <?php
+/**
+ * Jamie Krasnoo (http://github.com/jkrasnoo)
+ *
+ * @link        http://github.com/jkrasnoo/factories for the cononical source repository
+ * @copyright   Copyright (c) 2016 Jamie Krasnoo (http://github.com/jkrasnoo)
+ * @license     New BSD License - same as Zend Framework's
+ */
 
 namespace Jkrasnoo\Factories\Service;
 
@@ -10,6 +17,9 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Session\SaveHandler\Cache;
 use Zend\Cache\StorageFactory;
 
+/**
+ * Session save handler cache factory.
+ */
 class CacheSessionSaveHandlerFactory implements FactoryInterface
 {
     protected $configKey = 'session_save_handler';
