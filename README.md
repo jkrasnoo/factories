@@ -29,8 +29,10 @@ use Zend\Session\SaveHandler\SaveHandlerInterface;
 use Jkrasnoo\Factories\Service\CacheSessionSaveHandlerFactory;
 
 return [
-    'factories' => [
-        SaveHandlerInterface::class => CacheSessionSaveHandlerFactory::class
+    'service_manager' => [
+        'factories' => [
+            SaveHandlerInterface::class => CacheSessionSaveHandlerFactory::class
+         ]
      ]
 ];
 
@@ -61,11 +63,13 @@ return [
             'adapter' => [
                 'name'      => 'memcache',
                 'options'   => [
+                    'server' => [
+                        'host' => '127.0.0.1',
+                        'port' => 6379
+                    ],
                     'minTtl'  => 1,
                     'maxTtl'  => 0,
-                    'servers' => [
-                        // list of servers here    
-                    ]
+                    
                 ]
             ]
         ]
