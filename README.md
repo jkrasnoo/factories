@@ -76,3 +76,7 @@ return [
     ]  
 ];
 ```
+**NOTE:** There's possibly a small bug with the Redis adapter in `Zend\Cache` that causes it to throw an error
+about the `default` resource missing if you don't configure the adapter in just the right way.
+You need to make sure the `server` key is first in the `options` configuration or for some reason
+the server doesn't get set in `RedisResourceManager` properly.
